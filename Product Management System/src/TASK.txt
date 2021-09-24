@@ -1,0 +1,30 @@
+Product management System:
+Read following instructions and implement it:
+a.       Create following tables in database with proper constraints:
+    i.      Category : category_id, type. Type must be electronics/ stationery /general.
+   ii.      Product: product_id, name, category_id, available_quantity, price
+   iii.      User: user_id, name, password, type (admin/customer)
+   iv.      Bill: bill_no, cust_id(user_id), product_id, selected_quantity, amount
+ 
+c.       Create stored procedures for inserting values in product, user, and bill table.
+d.      Create a stored procedure at database side for calculating total bill amount.
+f.        At java side, display 2 options to the user.
+                     i.      Register user
+                    ii.      Login
+g.       If user selects register, accept all the required values for registration from the 
+         user and call procedure for inserting the value.
+h.      If choice is login accept login_id, and password from the user.
+i.       If login is successful, then find type of the user from the database.
+j.       If type of user is Admin display 2 options:
+                  i.      Add Product
+                 ii.      Edit Product
+k.     If add product is selected then accept the values from the user, provide necessary
+          details whenever it is required.
+l.    If edit product is selected then according to product_id updation must be performed.
+m.    If user type is customer then display 2 options:
+          i.      Select product
+          ii.      Display generated bill
+n.    If user selects select product option then display all available products list and 
+      ask him to entered required product_id and required_quantity. Insert all required 
+      details using stored procedure for bill.
+o.   If user selects display generated bill then display all the bills generated for that customer.

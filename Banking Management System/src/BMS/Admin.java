@@ -67,7 +67,7 @@ public class Admin {
 				int n=ps.executeUpdate();
 				con.commit();				
 				System.out.println("Insertion Done Successfully!");
-				rs=(JdbcRowSet) ps.executeQuery("select * from banking_customer");
+				rs=(JdbcRowSet) ps.executeQuery("select * from banking_customer");				
 				while(rs.next())
 				{
 					System.out.println("Customer Name: "+rs.getString(1)+"||"+" Account Number: "+rs.getLong(2)+"||"+" Adhaar Number: "+rs.getLong(3)+"||"+" Mobile Number: "+rs.getLong(4)+"||"+" Email: "+rs.getString(5));
